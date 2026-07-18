@@ -5,8 +5,7 @@
             [asobi.methods.analyze :as analyze]
             [asobi.methods.coverage-report :as coverage]))
 
-(def actor-dir (-> *file* io/file .getParentFile .getParentFile))
-(def seed (io/file actor-dir "data" "seed-asobi-graph.kotoba.edn"))
+(def seed (io/file "data" "seed-asobi-graph.kotoba.edn"))
 
 (defn load-seed [] (analyze/load-file* seed))
 

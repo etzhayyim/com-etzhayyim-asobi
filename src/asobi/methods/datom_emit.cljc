@@ -134,13 +134,12 @@
      "CLI entry: emit the seed graph as an EAVT datom log → out/asobi-datoms.kotoba.edn."
      [& argv]
      (let [argv (vec argv)
-           here (-> *file* clojure.java.io/file .getParentFile .getParentFile)
            seed (if (and (seq argv) (not (str/starts-with? (first argv) "--")))
                   (clojure.java.io/file (first argv))
-                  (clojure.java.io/file here "data" "seed-asobi-graph.kotoba.edn"))
+                  (clojure.java.io/file "data" "seed-asobi-graph.kotoba.edn"))
            outdir (if (some #{"--out"} argv)
                     (clojure.java.io/file (nth argv (inc (.indexOf argv "--out"))))
-                    (clojure.java.io/file here "out"))
+                    (clojure.java.io/file "out"))
            tx (if (some #{"--tx"} argv)
                 (Long/parseLong (nth argv (inc (.indexOf argv "--tx"))))
                 1)

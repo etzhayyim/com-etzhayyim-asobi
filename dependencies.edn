@@ -1,0 +1,13 @@
+{:repository/name "com-etzhayyim-asobi"
+ :dependencies/runtime
+ [{:name "com-etzhayyim-ie-flow"
+   :revision "35d36d912c9596dbc5094947b60202d9abdf61e6"}]
+ :dependencies/integrates
+ [{:name "com-etzhayyim-danjo" :revision "040520906acd07478391f80170181e7cf7919391"}
+  {:name "com-etzhayyim-inochi" :revision "80c16d364c53a12f3713d1e29133e80e54621106"}
+  {:name "com-etzhayyim-kanae" :revision "ecbb79e4b59a594180ee221cb7f35ad06b022ea7"}
+  {:name "com-etzhayyim-kataribe" :revision "93c0784791697e1a3b33d24c2d5e00e701db62e9"}
+  {:name "com-etzhayyim-kawaraban" :revision "85cd47ae00e5f30077f51282748db9aa6f6c53a1"}
+  {:name "com-etzhayyim-keizu" :revision "e6cae419389e46a0558fc16d2090dbf6d3bb7227"}
+  {:name "com-etzhayyim-manabi" :revision "c4632e1965d1454105fec0aa9235c014f7612a60"}
+  {:name "com-etzhayyim-tsumugi" :revision "16b338273d2145560042f9831cc0eda19df1d973"}]}

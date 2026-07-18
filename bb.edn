@@ -1,0 +1,4 @@
+{:paths ["src" "test"]
+ :deps {com-etzhayyim/ie-flow
+        {:git/url "https://github.com/etzhayyim/com-etzhayyim-ie-flow.git"
+         :git/sha "35d36d912c9596dbc5094947b60202d9abdf61e6"}}}

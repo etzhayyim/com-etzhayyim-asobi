@@ -6,9 +6,7 @@
             [asobi.methods.analyze :as analyze]
             [asobi.methods.datom-emit :as datom-emit]))
 
-(def seed
-  (-> *file* clojure.java.io/file .getParentFile .getParentFile
-      (clojure.java.io/file "data" "seed-asobi-graph.kotoba.edn")))
+(def seed (clojure.java.io/file "data" "seed-asobi-graph.kotoba.edn"))
 
 (defn- load-seed []
   (let [{:keys [nodes edges]} (analyze/load-file* seed)]

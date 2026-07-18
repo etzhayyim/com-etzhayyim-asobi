@@ -86,13 +86,12 @@
      "CLI entry: render coverage-report.md from a seed EDN graph."
      [& argv]
      (let [argv (vec argv)
-           here (-> *file* clojure.java.io/file .getParentFile .getParentFile)
            seed (if (and (seq argv) (not (str/starts-with? (first argv) "--")))
                   (clojure.java.io/file (first argv))
-                  (clojure.java.io/file here "data" "seed-asobi-graph.kotoba.edn"))
+                  (clojure.java.io/file "data" "seed-asobi-graph.kotoba.edn"))
            outdir (if (some #{"--out"} argv)
                     (clojure.java.io/file (nth argv (inc (.indexOf argv "--out"))))
-                    (clojure.java.io/file here "out"))
+                    (clojure.java.io/file "out"))
            {:keys [nodes edges]} (analyze/load-file* seed)]
        (.mkdirs outdir)
        (spit (clojure.java.io/file outdir "coverage-report.md") (report nodes edges))

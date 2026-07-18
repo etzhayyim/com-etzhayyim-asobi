@@ -23,7 +23,7 @@
             [etzhayyim.ie-flow.metrics :as iem]
             [clojure.string :as str]))
 
-(def default-seed "20-actors/asobi/data/seed-asobi-graph.kotoba.edn")
+(def default-seed "data/seed-asobi-graph.kotoba.edn")
 
 (defn- bearer-rows
   "Per-bearer rows: raw inbound access-provision load (volume — scattered cultural supply) +
